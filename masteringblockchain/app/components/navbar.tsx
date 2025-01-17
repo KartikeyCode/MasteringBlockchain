@@ -20,10 +20,10 @@ export default function Navbar() {
 
   return (
     
-    <div className="w-full flex items-center justify-between h-24 bg-[#034DA1] absolute  top-0  px-4 xl:px-10 border-b-4 border-[#d8ba41]">
+    <div className="w-full flex items-center justify-between h-24 bg-[#fcfcfc] absolute  top-0  px-4 xl:px-10 border-b-4 border-[#034DA1]">
       <div className="flex items-center gap-4">
       <Image src="/srmlogo.png" width={100} height={30} alt="SRM logo" />
-      <h1 className="text-white text-xl xl:text-2xl font-semibold">Mastering Blockchain</h1>
+      <h1 className="text-black text-xl xl:text-2xl font-semibold">Mastering Blockchain</h1>
       </div>
       
       {isLoggedIn &&

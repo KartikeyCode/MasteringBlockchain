@@ -20,6 +20,16 @@ const links = {
         ArtBAP:"https://drive.google.com/file/d/1_GcNkwizVHYCC11iDCk2E9HA0v-FZCB-/preview",
         BCTPrinceton:"https://drive.google.com/file/d/1MJ1Hz9OpgU6g2DSaPZVG4y4VK8g4Ap_W/preview",
         MBPopen:"https://drive.google.com/file/d/16pE2Fe6p4iSNT8qGKx7fouBv18U_AnUD/preview"
+    },
+    videos:{
+      session01:"https://youtube.com/embed/DK5EFtVZSts",
+      session02:"https://youtube.com/embed/vJTn8JjL2Ls",
+      session03:"https://youtube.com/embed/owswkxj9SW0",
+      session04:"https://youtube.com/embed/aN2fOfKqo34",
+      session05:"https://youtube.com/embed/Pcp03khoKXc",
+      session06:"https://youtube.com/embed/6Mt1vtTLRsE",
+      session07:"https://youtube.com/embed/0WbqIZqVY9I",
+      session08:"https://youtube.com/embed/_rbV1i2Izjs",
     }
   };
   

@@ -1,17 +1,17 @@
 FROM node:18-alpine as base
 RUN apk add --no-cache g++ make py3-pip libc6-compat
-WORKDIR masteringblockchain/app
+WORKDIR /masteringblockchain/app
 COPY package*.json ./
 EXPOSE 3000
 
 FROM base as builder
-WORKDIR masteringblockchain/app
+WORKDIR /masteringblockchain/app
 COPY . .
 RUN npm run build
 
 
 FROM base as production
-WORKDIR masteringblockchain/app
+WORKDIR /masteringblockchain/app
 
 ENV NODE_ENV=production
 RUN npm ci

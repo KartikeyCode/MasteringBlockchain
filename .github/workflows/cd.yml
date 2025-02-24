@@ -1,0 +1,26 @@
+name: CD Pipeline 
+
+on: 
+  workflow_run:
+    workflows: ["CI Pipeline"]
+    types:
+      - completed
+
+jobs:
+
+  deploy:
+
+    runs-on: self-hosted
+
+    steps:
+    - name: Pull Docker Image
+      run: sudo docker pull wcbongz/masteringblockchain
+
+    - name: Disable AppArmor (If applicable)
+      run: sudo aa-remove-unknown || true
+
+    - name: Stop and Remove Old Container
+      run: sudo docker rm -f masteringblockchain || true
+
+    - name: Run New Container
+      run: sudo docker run -d -p 3000:3000 --name nextjs_app wcbongz/masteringblockchain:latest

@@ -22,5 +22,9 @@ jobs:
     - name: Stop and Remove Old Container
       run: sudo docker rm -f masteringblockchain || true
 
-    - name: Run New Container
-      run: sudo docker run -d -p 3000:3000 --name nextjs_app wcbongz/masteringblockchain:latest
+    - name: Run New Container with Supabase Env Variables
+      run: |
+        sudo docker run -d -p 3000:3000 --name nextjs_app \
+          -e NEXT_PUBLIC_SUPABASE_URL=${{ secrets.SUPABASE_URL }} \
+          -e NEXT_PUBLIC_SUPABASE_ANON_KEY=${{ secrets.SUPABASE_ANON_KEY }} \
+          wcbongz/masteringblockchain:latest
